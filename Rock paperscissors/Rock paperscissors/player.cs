@@ -27,7 +27,7 @@ namespace Rock_paperscissors
             this.person =( Console.ReadLine().ToLower ());
 
             Random random = new Random();
-            int randomnumber = random.Next(1, 3);
+            int randomnumber = random.Next(1, 4);
 
 
 
@@ -39,7 +39,7 @@ namespace Rock_paperscissors
             {
                 this.computer = "paper";
             }
-            else
+            else 
             {
                 this.computer = "scissors";
             }
