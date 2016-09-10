@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rock_paperscissors
 {
-    class player
+    class Player
     {
         string person;
         string computer;
@@ -14,22 +14,19 @@ namespace Rock_paperscissors
         int run;
         int numberOfRun;
 
-        public player()
+        public Player()
         {
             this.run = 1;
             this.numberOfRun = 10;
         }
        
-        public string getInput()
+        public string GetInput()
         {
-            
             Console.WriteLine("enter your option:");
             this.person =( Console.ReadLine().ToLower ());
 
             Random random = new Random();
             int randomnumber = random.Next(1, 4);
-
-
 
             if (randomnumber == 1)
             {
@@ -49,24 +46,21 @@ namespace Rock_paperscissors
             return person;
         }
 
-        public void getWinner()
+        public void GetWinner()
         {
-
-            winner newwinner = new winner(person, computer);
-            newwinner.pickWinner();
-
-
+            Game newGame = new Game(person, computer);
+            newGame.ChooseWinner();
         }
-        public void runGame()
-
+        public void RunGame()
         {
             Console.WriteLine("Welcome to play the Rock Paper Scissors Game:");
 
             while (this.run < this.numberOfRun)
             {
-               getInput();
-               getWinner();
-                Console.WriteLine("Do you want to play Again:");
+               GetInput();
+               GetWinner();
+                Console.WriteLine("Do you want to play Again.");
+                Console.Write("Enter Yes or No:");
                 again = (Console.ReadLine().ToLower());
                 if (again == "yes")
                 {

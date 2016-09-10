@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace Rock_paperscissors
 {
-    class winner
+    class Game
     {
         string  playerOne;
         string  playerTwo;
 
-        public winner(string playerOne,string playerTwo)
+        public Game(string playerOne,string playerTwo)
         {
             this.playerOne = playerOne;
             this.playerTwo = playerTwo;
         }
 
-        public void pickWinner()
+        public void ChooseWinner()
         {
-
             if (playerOne == playerTwo)
             {
                 Console.WriteLine("Draw");
@@ -30,47 +29,35 @@ namespace Rock_paperscissors
                 if (playerTwo == "paper")
                 {
                     Console.WriteLine("you lose");
-
                 }
                 else
                 {
                     Console.WriteLine("you Won");
                 }
-
             }
             else if (playerOne == "paper")
             {
                 if (playerTwo == "rock")
                 {
                     Console.WriteLine("you won");
-
                 }
                 else
                 {
                     Console.WriteLine("you lose");
                 }
-
             }
             else if (playerOne == "scissors")
             {
                 if (playerTwo == "paper")
                 {
                     Console.WriteLine("you won");
-
                 }
                 else
                 {
                     Console.WriteLine("you lose");
                 }
-
             }
-
-
         }
-
-
-
-        }
-
-    }
+     }
+ }
 
